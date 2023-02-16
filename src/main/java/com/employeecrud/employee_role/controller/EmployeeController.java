@@ -35,4 +35,9 @@ public class EmployeeController {
     @RequestMapping(value="/updateEmployee",method = RequestMethod.PUT)
     public Employee updateEmployee(@RequestBody EmployeeDto employeeDto){ return employeeService.employeeUpdate(employeeDto);}
 
+    @GetMapping(value = "/getAllDetails")
+    public List<Employee> getAllEmployee(){
+        return employeeService.getAllEmployee();
+    }
+
 }

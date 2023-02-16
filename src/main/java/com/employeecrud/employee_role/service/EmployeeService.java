@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 @Service
 public class EmployeeService {
@@ -27,6 +29,11 @@ public class EmployeeService {
 
     public Employee saveemployee(Employee employee){
         return employeeRepo.save(employee);
+    }
+
+    public List<Employee> getAllEmployee()
+    {
+        return employeeRepo.findAll();
     }
 
         public Employee updateEmployee (Employee employee){

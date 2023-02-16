@@ -34,6 +34,12 @@ public class Employee implements Serializable {
 //        this.role = role;
 //    }
 
+    public Employee(String empName, Integer roleId) {
+        this.empName = empName;
+        this.roleId = roleId;
+    }
+
+
 
     public Employee(Integer empId, String empName, Integer roleId) {
         this.empId = empId;
